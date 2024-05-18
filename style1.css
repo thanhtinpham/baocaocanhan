@@ -1,0 +1,70 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: Times New Roman, serif;
+  line-height: 1.5em;
+}
+h1 {
+  font-size: 4em;
+  font-weight: normal;
+}
+h2 {
+  font-size: 1.2em;
+  margin-top: 0;
+}
+.info1{
+  text-align: center;
+}
+#menu {
+  border: 3px solid #783F27;
+  display: flex;
+  align-items: stretch;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+section {
+  background: #F6F3ED;
+  margin: 10px;
+  padding: 20px;
+  border: 1px dotted maroon;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+}
+.title {
+  background-color: #783F27;
+  color: #F9AB33;
+  line-height: 4em;
+}
+.button {
+  font-weight: bold;
+  background: #F9AB33;
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
+}
+.photo {
+  order: -2;
+}
+.ring-icon.ring-icon-right.ring-icon-one {
+    bottom: 130px;
+}
+.ring-icon.ring-icon-right {
+    right: 0;
+}
+.ring-icon {
+    position: fixed;
+    z-index: 20 !important;
+    top: initial !important;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: visibility .5s ease 0s;
+    background-color: rgba(0, 0, 0, 0);
+}

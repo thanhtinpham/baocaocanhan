@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vn">
+<head>
+	<title> Form Thông Tin</title>
+	<meta charset="utf-8">
+	<style>
+		body{
+			background-color: lightyellow;
+		}
+		form{
+			 margin: auto;
+			 width: 50%;
+			 border: 3px solid #73AD21;
+			 padding: 10px 20px 20px 20px;
+		}
+		caption{
+			text-align: left;
+		}
+
+	</style>
+</head>
+<body>
+	<h2>Vui Lòng Điền Thông Tin Vào Link Bên Dưới </h2>
+	<form id="infoForm" onsubmit="return validateForm()" action="/action_page.php" target="_blank">
+		<h3>Thông tin liên hệ</h3>
+		<ul>
+			<li>
+				<label for="fullName">Họ Và Tên: </label>
+				<input type="text" name="fullName" id="fullName" placeholder="Nguyễn Văn A" required>
+			</li>
+			<li>
+				<label for="address">Địa chỉ:</label>
+				<input type="text" name="address" id="address" placeholder="Số nhà, Tên đường, huyện, thành phố" required>
+			</li>
+			<li>
+				<label for="phoneNumber">Số điện thoại: </label>
+				<input type="tel" name="phoneNumber" id="phoneNumber" placeholder="0123456789" required>
+				<div class="invalid-feedback" id="phoneInvalidFeedback" style="display: none;">
+					Vui lòng điền đủ 10 số !
+				</div>
+			</li>
+		</ul>
+		
+		<h3>Thông tin sản phẩm</h3>
+		<table><caption><b>Sản phẩm bạn chọn:</b></caption>
+			<tr>
+				<td><input type="radio" name="tt" id="t" value="0"> 
+				<label for="t" >Tủ</label></td>
+			</tr>
+			<tr>
+				<td><input type="radio" name="tt" id="g" value="1"> 
+				<label for="g" >Giường</label></td>
+			</tr>
+			<tr>
+				<td><input type="radio" name="tt" id="c" value="2"> 
+				<label for="c" >Cửa</label></td>
+			</tr>
+			<tr>
+				<td><input type="radio" name="tt" id="b" value="3"> 
+				<label for="b" >Bàn Ghế</label></td>
+			</tr>
+			<tr>
+				<td><input type="radio" name="tt" id="k" value="4"> 
+				<label for="k" >Kệ</label></td>
+			</tr>
+			<tr>
+				<td><input type="radio" name="tt" id="ct" value="5"> 
+				<label for="ct" >Cầu thang</label></td>
+			</tr>
+			<tr>
+				<td><input type="radio" name="tt" id="kh" value="6"> 
+				<label for="kh" >Khác</label></td>
+			</tr>
+			<tr>
+				<td><label for="radio">Mô tả sản phẩm: </label>
+				<br>
+				<textarea name="instructions" id="form-mota" maxlength="400" cols="60" rows="4" placeholder="mô tả kích thước, loại gỗ, màu sơn..."></textarea></td>
+			</tr>
+		</table>
+		<button type="Submit">Hoàn tất</button>
+		<button><a  href="../do-go.html" class="button" >Quay lại</a></button>
+	</form>
+
+	<script>
+		function validateForm() {
+		  var fullName = document.getElementById('fullName').value;
+		  var address = document.getElementById('address').value;
+		  var phoneNumber = document.getElementById('phoneNumber').value;
+	
+		  // Check if all fields are filled
+		  if (fullName.trim() === "" || address.trim() === "" || phoneNumber.trim() === "") {
+			alert("Please fill out all fields.");
+			return false;
+		  }
+	
+		  // Check phone number format
+		  var phoneRegex = /^[0-9]{10}$/;
+		  if (!phoneRegex.test(phoneNumber)) {
+			var phoneInvalidFeedback = document.getElementById('phoneInvalidFeedback');
+			phoneInvalidFeedback.style.display = 'block';
+			return false;
+		  }
+	
+		  return true;
+		}
+	  </script>
+</body>
+</html>
