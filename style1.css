@@ -1,24 +1,33 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
+
 body {
   font-family: Times New Roman, serif;
   line-height: 1.5em;
 }
+
 h1 {
   font-size: 4em;
   font-weight: normal;
+  color: #f3d40c;
 }
+
 h2 {
   font-size: 1.2em;
   margin-top: 0;
 }
-.info1{
+
+.info1 {
   text-align: center;
 }
+
 #menu {
   border: 3px solid #783F27;
   display: flex;
@@ -26,20 +35,32 @@ h2 {
   flex-flow: row wrap;
   justify-content: center;
 }
+
 section {
-  background: #F6F3ED;
+  background: #ede3ce;
   margin: 10px;
   padding: 20px;
   border: 1px dotted maroon;
-  width: 240px;
+  width: 200px;
   display: flex;
   flex-direction: column;
-  flex: auto;
 }
+
 .title {
   background-color: #783F27;
-  color: #F9AB33;
-  line-height: 4em;
+  color: #dfee16;
+  margin: auto;
+  background-color: rgb(106, 33, 9);
+  text-align: center;
+  padding: 10px;
+  border: 2px solid rgb(29, 242, 217);
+}
+.title p {
+  line-height: 1.2;
+  font-size: 1.2em;
+}
+footer{
+  line-height: 1.2;
 }
 .button {
   font-weight: bold;
@@ -49,22 +70,37 @@ section {
   text-align: center;
   margin-top: auto;
 }
+
 .photo {
-  order: -2;
+  order: -1;
 }
+
 .ring-icon.ring-icon-right.ring-icon-one {
-    bottom: 130px;
+  bottom: 50px;
 }
+
 .ring-icon.ring-icon-right {
-    right: 0;
+  left: 0;
 }
+
 .ring-icon {
-    position: fixed;
-    z-index: 20 !important;
-    top: initial !important;
-    width: 80px;
-    height: 80px;
-    cursor: pointer;
-    transition: visibility .5s ease 0s;
-    background-color: rgba(0, 0, 0, 0);
+  position: fixed;
+  z-index: 20 !important;
+  top: initial !important;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: visibility .5s ease 0s;
+  background-color: rgba(0, 0, 0, 0);
+}
+.zalo{
+background: blue;
+position: absolute; 
+width: 40px; height: 40px; 
+border-radius: 100px; 
+text-align: center; 
+line-height: 40px; 
+font-weight: bold; 
+font-size: 15px; 
+top: 3px; left: 3px;"
 }
